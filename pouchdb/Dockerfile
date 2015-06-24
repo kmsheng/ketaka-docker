@@ -15,3 +15,7 @@ RUN ln -s `which nodejs` /usr/bin/node
 RUN npm install -g pouchdb-server
 
 WORKDIR /database
+
+EXPOSE 5984
+
+CMD pouchdb-server -o 0.0.0.0 -p 5984
