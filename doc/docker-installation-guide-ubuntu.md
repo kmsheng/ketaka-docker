@@ -10,3 +10,7 @@ This installation tested on:
 ```bash
 wget -qO- https://get.docker.com/ | sh
 ```
+
+```bash
+sudo usermod -aG docker ubuntu # for using docker without sudo
+```
