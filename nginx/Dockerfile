@@ -1,4 +1,5 @@
 FROM nginx:1.9.2
+
 MAINTAINER kmsheng "kmsh3ng@gmail.com"
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
