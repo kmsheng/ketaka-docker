@@ -10,11 +10,20 @@
 * This has been tested on
 * Run "git submodule init"
 * Run "git submodule update"
-* cd in nginx/ketaka/ && npm install
+* cd in nginx-php5/ketaka/ && npm install
 * Run "ks server" and Ctrl + C to stop ks server. # Create bundle.js and bundle.js.map
-* Replace kangyur\_images/ folder in nginx/ ( the real one should have more than 5G in size )
-* Put jiangkangyur.kdb in nginx/ketaka/
-* cd in nginx/
+* Replace kangyur\_images/ folder in nginx-php5/ ( the real one should have more than 5G in size )
+* Put jiangkangyur.kdb in nginx-php5/ketaka/
+
+### Start Ketaka Web Server ###
+
+* cd in nginx-php5/
+* docker run --name web -v "$PWD:/usr/share/nginx/html" \
+  -v "$PWD/nginx.conf:/etc/nginx/nginx.conf" -v "$PWD/www.conf:/etc/php5/fpm/pool.d/www.conf" \
+  -p 80:80 -d kmsheng/nginx-php5:0.0.1
+
+* cd in pouchdb/
+* docker run --name pouchdb -v "$PWD/database:/database" -p 5984:5984 -d kmsheng/pouchdb:0.0.1
 
 ### Q & A ###
 
