@@ -1,4 +1,4 @@
-# osx installation guide #
+# Docker OSX Installation Guide #
 
 ### Installation ###
 
