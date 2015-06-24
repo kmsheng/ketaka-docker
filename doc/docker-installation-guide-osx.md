@@ -46,3 +46,7 @@ boot2docker ssh
 * boot2docker is up
 * nfs in osx is up
 * nfs client in boot2docker is up
+
+### Notes ###
+
+* [LevelDB ( dependency of PouchDB ) doesn't like vboxfs](https://github.com/boot2docker/boot2docker/issues/794), so we use nfs instead.
