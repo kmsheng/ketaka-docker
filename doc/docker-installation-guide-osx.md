@@ -22,15 +22,24 @@ export DOCKER_CERT_PATH=/Users/kmsheng/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 ```
 
-* Run "docker run hello-world" and "docker info" to make sure that your docker is installed properly.
-* Run "boot2docker ip" to show boot2dockers vm ip
+```bash
+docker run hello-world
+docker info # make sure that your docker is installed properly.
+```
+```bash
+boot2docker ip # show boot2dockers vm ip
+```
 * make sure "/Users -mapall={HOST_USER}:staff {HOST_PRIVATE_IP}" is in /etc/exports
 * make sure "nfs.server.mount.require_resv_port = 0" is in /etc/nfs.conf
-* sudo nfsd start
-* boot2docker ssh
+```bash
+sudo nfsd start
+boot2docker ssh
+```
+```bash
 * sudo umount /Users
 * sudo /usr/local/etc/init.d/nfs-client start
 * sudo mount {HOST_PRIVATE_IP}:/Users /Users -o rw,async,noatime,rsize=32768,wsize=32768,proto=tcp
+```
 
 ### Things to be checked on every reboot ###
 
