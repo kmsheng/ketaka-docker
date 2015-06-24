@@ -3,7 +3,10 @@
 ### Prerequisite ###
 
 * docker - Read docker installation guide in doc/ and install it.
-* ksana-cli - Run "npm install -g ksana-cli" ( need sudo on Linux and Mac system )
+* ksana-cli
+```bash
+sudo npm install -g ksana-cli
+```
 
 ### Installation ###
 
@@ -12,7 +15,7 @@ git submodule init
 git submodule update
 cd nginx-php5/ketaka/
 npm install
-ks server # and press ctrl + c to stop ks server. This creates bundle.js and bundle.js.map
+ks server # press ctrl + c to stop ks server, this creates bundle.js and bundle.js.map
 ```
 * Replace kangyur\_images/ folder in nginx-php5/ ( the real one should have more than 5G in size )
 * Put jiangkangyur.kdb in nginx-php5/ketaka/
