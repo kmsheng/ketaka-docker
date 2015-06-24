@@ -2,7 +2,7 @@
 
 ### Prerequisite ###
 
-* docker - Read docker installation guide in doc/ and install it.
+* docker - Read docker installation guide in doc/ and install it. ( [osx](https://github.com/kmsheng/ketaka-docker/blob/master/doc/docker-installation-guide-osx.md) / [ubuntu](https://github.com/kmsheng/ketaka-docker/blob/master/doc/docker-installation-guide-ubuntu.md) )
 * ksana-cli
 ```bash
 sudo npm install -g ksana-cli
