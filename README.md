@@ -1,10 +1,12 @@
 # Ketaka Docker #
 
 ### Prerequisite ###
+
 * docker - Read docker installation guide in doc/ and install it.
 * ksana-cli - Run "npm install -g ksana-cli" ( need sudo on Linux and Mac system )
 
 ### Installation ###
+
 * This has been tested on
 * Run "git submodule update" first
 * cd in nginx/ketaka/ && npm install
