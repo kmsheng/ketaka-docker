@@ -19,6 +19,7 @@ ks server # press ctrl + c to stop ks server, this creates bundle.js and bundle.
 ```
 * Replace kangyur\_images/ folder in nginx-php5/ ( the real one should have more than 5G in size )
 * Put jiangkangyur.kdb in nginx-php5/ketaka/
+* Put database folder in pouchdb/database/ ( was in /usr/local/Cellar/nginx/x.x.x/html/ketaka/database according to [this](https://github.com/karmapa17/ketaka) )
 
 ### Start Ketaka Web Server ###
 
