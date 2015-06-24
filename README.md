@@ -7,11 +7,13 @@
 
 ### Installation ###
 
-* This has been tested on
-* Run "git submodule init"
-* Run "git submodule update"
-* cd in nginx-php5/ketaka/ && npm install
-* Run "ks server" and Ctrl + C to stop ks server. # Create bundle.js and bundle.js.map
+```bash
+git submodule init
+git submodule update
+cd nginx-php5/ketaka/
+npm install
+ks server # and press ctrl + c to stop ks server. This creates bundle.js and bundle.js.map
+```
 * Replace kangyur\_images/ folder in nginx-php5/ ( the real one should have more than 5G in size )
 * Put jiangkangyur.kdb in nginx-php5/ketaka/
 
