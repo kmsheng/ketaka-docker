@@ -9,3 +9,5 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 
 RUN apt-get install -y php5 php5-fpm
+
+CMD service php5-fpm start && nginx
