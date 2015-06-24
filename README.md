@@ -22,13 +22,18 @@ ks server # press ctrl + c to stop ks server, this creates bundle.js and bundle.
 
 ### Start Ketaka Web Server ###
 
-* cd in nginx-php5/
-* docker run --name web -v "$PWD:/usr/share/nginx/html" \
-  -v "$PWD/nginx.conf:/etc/nginx/nginx.conf" -v "$PWD/www.conf:/etc/php5/fpm/pool.d/www.conf" \
-  -p 80:80 -d kmsheng/nginx-php5:0.0.1
-
-* cd in pouchdb/
-* docker run --name pouchdb -v "$PWD/database:/database" -p 5984:5984 -d kmsheng/pouchdb:0.0.1
+#### create nginx/php5-fpm container ####
+```bash
+cd nginx-php5/
+docker run --name web -v "$PWD:/usr/share/nginx/html" \
+-v "$PWD/nginx.conf:/etc/nginx/nginx.conf" -v "$PWD/www.conf:/etc/php5/fpm/pool.d/www.conf" \
+-p 80:80 -d kmsheng/nginx-php5:0.0.1
+```
+### create pouchdb container ###
+```bash
+cd pouchdb/
+docker run --name pouchdb -v "$PWD/database:/database" -p 5984:5984 -d kmsheng/pouchdb:0.0.1
+```
 
 ### Q & A ###
 
