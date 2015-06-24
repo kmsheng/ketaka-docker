@@ -15,12 +15,12 @@ This installation tested on:
   Values of DOCKER_HOST and DOCKER_CERT_PATH may be varied.
   For example, my message is
 
-"""
-  # in my .zshrc file
-  export DOCKER_HOST=tcp://192.168.59.103:2376
-  export DOCKER_CERT_PATH=/Users/kmsheng/.boot2docker/certs/boot2docker-vm
-  export DOCKER_TLS_VERIFY=1
-"""
+```bash
+# in my .zshrc file
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/kmsheng/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+```
 
 * Run "docker run hello-world" and "docker info" to make sure that your docker is installed properly.
 * Run "boot2docker ip" to show boot2dockers vm ip
