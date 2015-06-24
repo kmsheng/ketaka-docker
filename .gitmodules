@@ -1,0 +1,3 @@
+[submodule "nginx-php5/ketaka"]
+	path = nginx-php5/ketaka
+	url = git@github.com:kmsheng/ketaka.git
