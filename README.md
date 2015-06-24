@@ -10,7 +10,7 @@
 * cd in nginx/ketaka/ && npm install
 * Run "ks server" and Ctrl + C to stop ks server. # Create bundle.js and bundle.js.map
 * Replace kangyur\_images/ folder in nginx/ ( the real one should have more than 5G in size )
-* Put jiangkangyur.kdb in nginx/
+* Put jiangkangyur.kdb in nginx/ketaka/
 * cd in nginx/
 
 
