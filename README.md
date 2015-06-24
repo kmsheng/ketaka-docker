@@ -8,7 +8,8 @@
 ### Installation ###
 
 * This has been tested on
-* Run "git submodule update" first
+* Run "git submodule init"
+* Run "git submodule update"
 * cd in nginx/ketaka/ && npm install
 * Run "ks server" and Ctrl + C to stop ks server. # Create bundle.js and bundle.js.map
 * Replace kangyur\_images/ folder in nginx/ ( the real one should have more than 5G in size )
