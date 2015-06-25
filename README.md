@@ -24,6 +24,7 @@ ks server # press ctrl + c to stop ks server, this creates bundle.js and bundle.
 ### Start Ketaka Web Server ###
 
 #### Create nginx/php5-fpm container ####
+Note: if you are using boot2docker, the web server ip will be boot2docker's ip, not localhost. 
 ```bash
 cd nginx-php5/
 docker run --name web -v "$PWD:/usr/share/nginx/html" \
