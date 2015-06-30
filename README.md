@@ -2,28 +2,40 @@
 
 ### Prerequisite ###
 
-* docker - Read docker installation guide in doc/ and install it.
-* ksana-cli - Run "npm install -g ksana-cli" ( need sudo on Linux and Mac system )
+* docker - Read docker installation guide in doc/ and install it. ( [osx](https://github.com/kmsheng/ketaka-docker/blob/master/doc/docker-installation-guide-osx.md) / [ubuntu](https://github.com/kmsheng/ketaka-docker/blob/master/doc/docker-installation-guide-ubuntu.md) )
+* ksana-cli
+```bash
+sudo npm install -g ksana-cli
+```
 
 ### Installation ###
 
-* This has been tested on
-* Run "git submodule init"
-* Run "git submodule update"
-* cd in nginx-php5/ketaka/ && npm install
-* Run "ks server" and Ctrl + C to stop ks server. # Create bundle.js and bundle.js.map
+```bash
+git submodule init
+git submodule update
+cd nginx-php5/ketaka/
+npm install
+ks server # press ctrl + c to stop ks server, this creates bundle.js and bundle.js.map
+```
 * Replace kangyur\_images/ folder in nginx-php5/ ( the real one should have more than 5G in size )
 * Put jiangkangyur.kdb in nginx-php5/ketaka/
+* Put database folder in pouchdb/database/ ( was in /usr/local/Cellar/nginx/x.x.x/html/ketaka/database according to [this](https://github.com/karmapa17/ketaka) )
 
 ### Start Ketaka Web Server ###
 
-* cd in nginx-php5/
-* docker run --name web -v "$PWD:/usr/share/nginx/html" \
-  -v "$PWD/nginx.conf:/etc/nginx/nginx.conf" -v "$PWD/www.conf:/etc/php5/fpm/pool.d/www.conf" \
-  -p 80:80 -d kmsheng/nginx-php5:0.0.1
-
-* cd in pouchdb/
-* docker run --name pouchdb -v "$PWD/database:/database" -p 5984:5984 -d kmsheng/pouchdb:0.0.1
+#### Create nginx/php5-fpm container ####
+Note: if you are using boot2docker, the web server ip will be boot2docker's ip, not localhost. 
+```bash
+cd nginx-php5/
+docker run --name web -v "$PWD:/usr/share/nginx/html" \
+-v "$PWD/nginx.conf:/etc/nginx/nginx.conf" -v "$PWD/www.conf:/etc/php5/fpm/pool.d/www.conf" \
+-p 80:80 -d kmsheng/nginx-php5:0.0.1
+```
+### Create pouchdb container ###
+```bash
+cd pouchdb/
+docker run --name pouchdb -v "$PWD/database:/database" -p 5984:5984 -d kmsheng/pouchdb:0.0.1
+```
 
 ### Q & A ###
 
