@@ -10,6 +10,7 @@ sudo npm install -g ksana-cli
 
 ### Installation ###
 
+* This repo should be cloned in /Users if you're OSX user.
 ```bash
 git submodule init
 git submodule update
